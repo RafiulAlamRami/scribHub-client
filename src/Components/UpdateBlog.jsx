@@ -11,7 +11,7 @@ const UpdateBlog = ({params}) => {
     const [upblogs,setUpblogs]=useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/upblog/${id}`)
+        fetch(`https://scrib-hub-server.vercel.app/upblog/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -23,7 +23,7 @@ const UpdateBlog = ({params}) => {
 
     const {mutate,isPending}=useMutation({
         mutationFn:(data)=>{
-            return axios.put(`http://localhost:5000/upblog/${id}`,data,{withCredentials:true})
+            return axios.put(`https://scrib-hub-server.vercel.app/upblog/${id}`,data,{withCredentials:true})
         }
     })
     const HandleAddBlog=event=>{

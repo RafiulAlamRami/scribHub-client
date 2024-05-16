@@ -9,7 +9,7 @@ const RecentBlogSection = () => {
 
     const { mutate } = useMutation({
         mutationFn: (data) => {
-            return axios.post('http://localhost:5000/addwish', data, { withCredentials: true })
+            return axios.post('https://scrib-hub-server.vercel.app/addwish', data, { withCredentials: true })
         }
     })
 
@@ -27,7 +27,7 @@ const RecentBlogSection = () => {
     const { isPending, isError, error, data: blogs=[] } = useQuery({
         queryKey: ['recentblogs'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/recentblog');
+            const res = await fetch('https://scrib-hub-server.vercel.app/recentblog');
             const retData = await res.json()
             console.log(retData);
             return retData;

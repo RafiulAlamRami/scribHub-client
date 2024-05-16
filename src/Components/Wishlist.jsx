@@ -20,7 +20,7 @@ const Wishlist = () => {
             cancelButtonColor: "#d33",
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
-            fetch(`http://localhost:5000/delete/${id}`, {
+            fetch(`https://scrib-hub-server.vercel.app/delete/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -45,7 +45,7 @@ const Wishlist = () => {
     }
 
     useEffect(()=>{
-            fetch(`http://localhost:5000/getwish/${user.email}`)
+            fetch(`https://scrib-hub-server.vercel.app/getwish/${user.email}`)
             .then(res=>res.json())
             .then(data=>{
                 setMywishs(data);

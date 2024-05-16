@@ -18,7 +18,7 @@ const BlogDetails = ({ params }) => {
     const { isPending, isError, error, data: blog } = useQuery({
         queryKey: ['blogs'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/blogDetails/${id}`);
+            const res = await fetch(`https://scrib-hub-server.vercel.app/blogDetails/${id}`);
             const retData = await res.json()
             console.log(retData);
             return retData;
@@ -27,7 +27,7 @@ const BlogDetails = ({ params }) => {
 
     // const {mutate}=useMutation({
     //     mutationFn:(data)=>{
-    //         return axios.post('http://localhost:5000/addcomment',data,{withCredentials:true})
+    //         return axios.post('https://scrib-hub-server.vercel.app/addcomment',data,{withCredentials:true})
     //     }
     // })
 
@@ -42,7 +42,7 @@ const BlogDetails = ({ params }) => {
         const userAndCom = { comment:text, name, photo,id }
         // setUserData(userAndCom);
 
-        fetch(`http://localhost:5000/addcomment`,{
+        fetch(`https://scrib-hub-server.vercel.app/addcomment`,{
             method:'POST',
             headers:{
                 'content-type': 'application/json'
@@ -59,7 +59,7 @@ const BlogDetails = ({ params }) => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/getcomment/${id}`)
+        fetch(`https://scrib-hub-server.vercel.app/getcomment/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data);

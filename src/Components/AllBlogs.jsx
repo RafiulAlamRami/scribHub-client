@@ -15,7 +15,7 @@ const AllBlogs = () => {
     let { isPending: pendin, data: allBlogs } = useQuery({
         queryKey: ['allBlogs'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/allblogs`);
+            const res = await fetch(`https://scrib-hub-server.vercel.app/allblogs`);
             const retData2 = await res.json()
             console.log(retData2);
             setABlogs(retData2)
@@ -28,7 +28,7 @@ const AllBlogs = () => {
 
     const { mutate } = useMutation({
         mutationFn: (data) => {
-            return axios.post('http://localhost:5000/addwish', data, { withCredentials: true })
+            return axios.post('https://scrib-hub-server.vercel.app/addwish', data, { withCredentials: true })
         }
     })
 
@@ -45,7 +45,7 @@ const AllBlogs = () => {
         queryKey: ['blogs', category],
         enabled: !!category,
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/allblogs/${category}`);
+            const res = await fetch(`https://scrib-hub-server.vercel.app/allblogs/${category}`);
             const retData = await res.json()
             console.log(retData);
             return retData;
@@ -66,7 +66,7 @@ const AllBlogs = () => {
     //     queryKey:['blogs',category,filter],
     //     enabled:!!category  && !!filter,
     //     queryFn:async ()=>{
-    //         const res=await fetch(`http://localhost:5000/allblogs/${category}`);
+    //         const res=await fetch(`https://scrib-hub-server.vercel.app/allblogs/${category}`);
     //         const retData=await res.json()
     //         console.log( retData);
     //         return retData;
@@ -77,7 +77,7 @@ const AllBlogs = () => {
 
 
     // useEffect(()=>{
-    //     fetch(`http://localhost:5000/allblogs/${c}`)
+    //     fetch(`https://scrib-hub-server.vercel.app/allblogs/${c}`)
     //     .then(res=>res.json())
     //     .then(data=>{
     //         console.log(data);
@@ -92,7 +92,7 @@ const AllBlogs = () => {
         queryKey: ['blogs', search],
         enabled: !!search,
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/allblog/${search}`);
+            const res = await fetch(`https://scrib-hub-server.vercel.app/allblog/${search}`);
             const retData3 = await res.json()
             console.log(retData3);
             return retData3;

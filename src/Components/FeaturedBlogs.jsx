@@ -13,7 +13,7 @@ const FeaturedBlogs = () => {
     const [datas,setDatas]=useState()
 
     useEffect(()=>{
-        fetch('http://localhost:5000/feature')
+        fetch('https://scrib-hub-server.vercel.app/feature')
         .then(res=>res.json())
         .then(data=>{
             setDatas(data)

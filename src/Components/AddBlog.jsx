@@ -9,7 +9,7 @@ const AddBlog = () => {
 
     const {mutate,isPending}=useMutation({
         mutationFn:(data)=>{
-            return axios.post('http://localhost:5000/addblog',data,{withCredentials:true})
+            return axios.post('https://scrib-hub-server.vercel.app/addblog',data,{withCredentials:true})
         }
     })
     const HandleAddBlog=event=>{
