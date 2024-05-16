@@ -26,7 +26,7 @@ const Banner = () => {
                         <h1 className="text-3xl font-bold tracking-wide text-gray-800 dark:text-white lg:text-[3rem] leading-[1.2em] text-left">Read,Grow,Succeed Your journey starts here.</h1>
                         <p className="mt-[.9em] mb-[2em] text-gray-600 dark:text-gray-300 text-[1.3rem] font-normal">Embark on a transformative adventure of self-discovery and empowerment through our inspiring collection of reads. Fuel your mind, cultivate growth, and pave the path to success with every turn of the page. Begin your journey to greatness today.</p>
                         <div className="mt-6">
-                            <a href="/allblogs" className="px-6 py-2.5 mt-6 text-xl font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-500 lg:mx-0 lg:w-auto focus:outline-none">See Blogs</a>
+                            <a href="" className="px-6 py-2.5 mt-6 text-xl font-medium leading-5 text-center text-white capitalize bg-blue-600 rounded-lg hover:bg-blue-500 lg:mx-0 lg:w-auto focus:outline-none">See Blogs</a>
                         </div>
                     </div>
                 </div>
