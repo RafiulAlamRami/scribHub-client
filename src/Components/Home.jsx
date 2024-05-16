@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import RecentBlogSection from './RecentBlogSection';
 import NewsLetter from './NewsLetter';
+import Faq from './Faq';
 
 const Home = () => {
     return (
@@ -9,7 +10,7 @@ const Home = () => {
             <Banner></Banner>
             <RecentBlogSection></RecentBlogSection>
             <h1 className='text-center text-[2rem] font-lex font-bold mt-[3em] mb-[1.5em]'>Our Popularity</h1>
-            <div className="flex shadow w-full popu">
+            <div className="flex shadow w-full popu mb-[3em]">
 
                 <div className="stat text-center flex justify-center items-center gap-[2em]">
                     
@@ -49,6 +50,7 @@ const Home = () => {
 
             </div>
             <NewsLetter></NewsLetter>
+            <Faq></Faq>
         </div>
     );
 };
