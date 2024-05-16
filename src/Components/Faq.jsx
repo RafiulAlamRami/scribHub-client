@@ -18,10 +18,10 @@ const Faq = () => {
             <div className="collapse bg-base-200">
                 <input type="radio" name="my-accordion-1"/>
                 <div className="collapse-title text-[1.5rem] font-semibold text-center ">
-                Can I find personalized or custom textile pieces?
+                Can I update the of my blog?
                 </div>
                 <div className="collapse-content text-center text-[1.3rem] font-medium">
-                    <p>Absolutely! We offer a range of customizable options, allowing you to collaborate with artisans to create bespoke textile art and craft pieces tailored to your preferences, ensuring a truly unique addition to your home or wardrobe.</p>
+                    <p>Absolutely! You can.</p>
                 </div>
             </div>
             <div className="collapse bg-base-200">
