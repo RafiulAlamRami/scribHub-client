@@ -34,7 +34,7 @@ const FeaturedBlogs = () => {
 
     return (
         <div>
-            <h1 className='text-[1.6rem] text-center font-bold'>Featured Blogs</h1>
+            <h1 className='text-[1.6rem] text-center font-bold font-lex'>Featured Blogs</h1>
             <Table
       columns={[
         { key: 'column1', title: 'No', dataType: DataType.String },
