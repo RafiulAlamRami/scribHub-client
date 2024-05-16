@@ -9,7 +9,7 @@ const Faq = () => {
            <div className="collapse bg-base-200">
                 <input type="radio" name="my-accordion-1" defaultChecked />
                 <div className="collapse-title text-[1.5rem] font-semibold text-center ">
-                How do you ensure the quality of products?
+                How do I start blogging on BloggyWorld?
                 </div>
                 <div className="collapse-content text-center text-[1.3rem] font-medium">
                     <p>We meticulously vet each artisan and product, prioritizing quality materials, attention to detail, and traditional crafting techniques to guarantee that our  the finest textile creations.</p>
