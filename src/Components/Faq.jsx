@@ -27,10 +27,10 @@ const Faq = () => {
             <div className="collapse bg-base-200">
                 <input type="radio" name="my-accordion-1" />
                 <div className="collapse-title text-[1.5rem] font-semibold text-center ">
-                Do you feature local artisans?
+                How can I increase visibility for my blog posts
                 </div>
                 <div className="collapse-content text-center text-[1.3rem] font-medium">
-                    <p>Yes, we support global artisans.</p>
+                    <p>To increase visibility for your blog posts, we recommend optimizing your content for search engines, sharing your posts on social media, engaging with other bloggers, and participating in our community forums and events.</p>
                 </div>
             </div>
 
