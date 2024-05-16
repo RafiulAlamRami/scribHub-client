@@ -19,7 +19,7 @@ const Wishlist = () => {
             
         }
     })
-
+    console.log(data);
     return (
         <div>
            <p>wishlist :{data?.length}</p>

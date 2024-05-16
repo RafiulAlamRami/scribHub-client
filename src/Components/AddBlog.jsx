@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { toast } from 'react-toastify';
 import { useMutation, useQuery } from '@tanstack/react-query';
@@ -9,7 +9,7 @@ const AddBlog = () => {
 
     const {mutate,isPending}=useMutation({
         mutationFn:(data)=>{
-            return axios.post('https://scrib-hub-server.vercel.app/addblog',data,{withCredentials:true})
+            return axios.post('http://localhost:5000/addblog',data,{withCredentials:true})
         }
     })
     const HandleAddBlog=event=>{

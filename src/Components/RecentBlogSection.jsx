@@ -25,9 +25,9 @@ const RecentBlogSection = () => {
 
     // const {isPending,isError,error,data:{data:blogs}}=useQuery({
     const { isPending, isError, error, data: blogs=[] } = useQuery({
-        queryKey: ['blogs'],
+        queryKey: ['recentblogs'],
         queryFn: async () => {
-            const res = await fetch('https://scrib-hub-server.vercel.app/recentblog');
+            const res = await fetch('http://localhost:5000/recentblog');
             const retData = await res.json()
             console.log(retData);
             return retData;
@@ -43,7 +43,7 @@ const RecentBlogSection = () => {
     if (isError) {
         return <p>{error.message}</p>
     }
-
+console.log(blogs);
     return (
         <div className='my-[8rem]'>
             <div>
@@ -53,7 +53,7 @@ const RecentBlogSection = () => {
             <div>
                 <div className='lg:grid lg:grid-cols-3 md:grid md:grid-cols-2 grid grid-cols-1 gap-[.5em]'>
                     {
-                       blogs && blogs.map(blog =>
+                       blogs && blogs?.map(blog =>
                             <>
 
                                 <div className="max-w-lg p-[1.5em] shadow-md dark:bg-gray-50 dark:text-gray-800 border rounded-xl">
@@ -67,11 +67,11 @@ const RecentBlogSection = () => {
                                             <h3 className="text-[1.7rem] font-lex font-semibold text-center">{blog.title}</h3>
 
                                             <div className='flex justify-around text-[1.1rem] font-semibold text-[#131313b2]'>
-                                                <p><span className='font-lex font-extrabold text-[#1313137f]'>SubCategory : </span> {blog.category}</p>
-                                                <p>Stock Status : {blog.shortDes}</p>
+                                                <p><span className='font-lex font-extrabold text-[#1313137f]'>Category : </span> {blog.category}</p>
+                                                {/* <p>Stock Status : {blog.shortDes}</p> */}
                                             </div>
                                             <div>
-                                                <p className='text-[1.1rem] font-semibold text-[#131313b2]'>{ }</p>
+                                                <p className='text-[1.1rem] font-semibold text-[#131313b2]'>{blog.shortDes }</p>
                                             </div>
                                         </div>
                                         <div className='flex gap-5'>
