@@ -25,6 +25,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import BlogDetails from './Components/BlogDetails.jsx';
+import UpdateBlog from './Components/UpdateBlog.jsx';
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path:'/blogDetails/:id',
         element:<PrivateRoute><BlogDetails></BlogDetails></PrivateRoute>
+      },
+      {
+        path:'/updateblog/:id',
+        element:<PrivateRoute><UpdateBlog></UpdateBlog></PrivateRoute>
       }
     ]
   },

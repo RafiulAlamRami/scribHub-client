@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@tanstack/react-query';
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { AuthContext } from '../Provider/AuthProvider';
 import axios from 'axios';
 
@@ -92,6 +92,12 @@ const BlogDetails = ({ params }) => {
                             <p className="block mt-2 text-[2rem] font-semibold text-gray-800 transition-colors duration-300 transform dark:text-white hover:text-gray-600 hover:underline" tabindex="0" role="link">{blog.title}</p>
                             <p className="mt-2 text-[1.5rem] text-gray-600 dark:text-gray-400">{blog.shortDes}</p>
                             <p className="mt-2 text-[1.7rem] text-gray-600 dark:text-gray-400">{blog.longDes}</p>
+                        </div>
+
+                        <div>
+                            {user.email === blog.email && 
+                            <Link to={`/updateblog/${id}`}><button className='btn my-[1em] text-[1.3rem] font-bold'>Update your Blog</button></Link>
+                            }
                         </div>
 
                         <div className="mt-4">
