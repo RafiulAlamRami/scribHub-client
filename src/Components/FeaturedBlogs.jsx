@@ -26,7 +26,9 @@ const FeaturedBlogs = () => {
       column1: `${index+1}`,
       column2: `${data.title}`,
       column3: `${user?.displayName}`,
-      column4: `column:4 row:${index}`,
+      column4: `${ data?.photo && <>
+      <img src={data.photo} alt="a" />
+      </> }`,
       id: index,
     }));
 
