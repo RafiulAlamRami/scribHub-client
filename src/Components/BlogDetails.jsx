@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const BlogDetails = ({params}) => {
 
     const {id}=useParams()
+    const {user}=useContext(AuthContext)
 
     console.log(typeof id);
 
