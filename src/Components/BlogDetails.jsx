@@ -70,7 +70,7 @@ const BlogDetails = ({ params }) => {
     }, [id])
 
     if (isPending) {
-        return <p>loading......</p>
+        return <p className='text-[2rem]'>loading......</p>
     }
     if (isError) {
         return <p>{error.message}</p>
