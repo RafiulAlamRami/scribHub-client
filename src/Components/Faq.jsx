@@ -12,7 +12,7 @@ const Faq = () => {
                 How do I start blogging on BloggyWorld?
                 </div>
                 <div className="collapse-content text-center text-[1.3rem] font-medium">
-                    <p>We meticulously vet each artisan and product, prioritizing quality materials, attention to detail, and traditional crafting techniques to guarantee that our  the finest textile creations.</p>
+                    <p>To start blogging on BloggyWorld, simply sign up for an account, create your profile, and start writing your first post. It's that easy!</p>
                 </div>
             </div>
             <div className="collapse bg-base-200">
