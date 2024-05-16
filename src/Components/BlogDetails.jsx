@@ -73,7 +73,7 @@ const BlogDetails = ({ params }) => {
         return <p className='text-[2rem]'>loading......</p>
     }
     if (isError) {
-        return <p>{error.message}</p>
+        return <p className='text-[2rem]'>{error.message}</p>
     }
 
     return (
